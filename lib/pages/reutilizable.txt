@@ -1,0 +1,44 @@
+// Widget buildProfile() {
+  //   final urlPerfil =
+  //       'https://preview.redd.it/prompt-smiling-boy-with-white-and-black-hair-wearing-v0-5olc6gh7vo9a1.png?auto=webp&s=89ac36bb0c71f4d5f0f3ce9e4090861e0f440128';
+
+  //   return Stack(
+  //     clipBehavior: Clip.none,
+  //     children: [
+  //       //contenedor para la imagen de arriba(background)
+  //       //es importante el orden en el que estan colocados
+  //       // porque asi se mostraran en la pantalla
+  //       Container(
+  //         color: Colors.amberAccent,
+  //         height: 120,
+  //       ),
+  //       //con positioned podemos colocar la imagen donde sea dentro del Stack
+  //       Positioned(
+  //         bottom: -20,
+  //         //para jalar la imagen tanto a ala izquierda como a la derecha
+  //         //se estira
+  //         left: 0,
+  //         right: 0,
+  //         //para centrar envolvemos en center
+  //         child: Center(
+  //           child: Container(
+  //             width: 100,
+  //             height: 100,
+  //             decoration: BoxDecoration(
+  //                 //Hacer circular la imagen
+  //                 borderRadius: BorderRadius.circular(20),
+  //                 boxShadow: [
+  //                   BoxShadow(color: Colors.white, spreadRadius: 4),
+  //                   // BoxShadow(blurRadius: 5, color: Colors.white38)
+  //                 ],
+  //                 image: DecorationImage(
+  //                   image: NetworkImage(urlPerfil),
+  //                   //con esto hacemos que la imagen tenga 100px de alto y ancho
+  //                   fit: BoxFit.cover,
+  //                 )),
+  //           ),
+  //         ),
+  //       ),
+  //     ],
+  //   );
+  // }

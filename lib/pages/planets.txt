@@ -1,0 +1,87 @@
+import 'package:flutter/material.dart';
+
+class Planets extends StatelessWidget {
+  const Planets({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: EdgeInsets.all(10.0),
+      color: Colors.white,
+      width: double.infinity,
+      height: 300,
+      child: Stack(
+        children: <Widget>[
+          Positioned(
+            left: 50,
+            child: Card(
+              elevation: 10.0,
+              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+              child: Container(
+                decoration: BoxDecoration(
+                  color: Color(0xff333366),
+                  borderRadius: BorderRadius.circular(10.0),
+                ),
+                //ajustar el cuadro segun sea necesario
+                constraints: BoxConstraints(maxWidth: 330, maxHeight: 200),
+              ),
+            ),
+          ),
+          ///////////
+          const Positioned(
+            //ajustar segun sea necesario
+            top: 25,
+              child: Image(
+            // image: AssetImage('assets/img/marte.png'),
+            image: NetworkImage('https://www.pngmart.com/files/21/Mars-Planet-PNG-Photo.png'),
+            //ajustar tamaño segun sea necesario
+            width: 130.0, height: 130.0,
+          )
+          ),
+          const Positioned(
+            top: 25.0,
+            left: 150,
+            child: Text("Marte", style: TextStyle(fontSize: 24,
+            fontWeight: FontWeight.bold),),
+            ),
+          const Positioned(
+            top: 65, left: 150,
+            child:Text('Milkway....',
+          style: TextStyle(fontSize: 18, color: Colors.white,
+          shadows: <Shadow>[
+      Shadow(
+        offset: Offset(2, 2),  // Desplazamiento horizontal y vertical de la sombra
+        blurRadius: 3.0,      // Radio del desenfoque de la sombra
+        color: Colors.black,   // Color de la sombra
+      ),
+    ],
+          ),
+          )),
+      const Positioned(
+        top: 130,
+              left: 150,
+              child: Icon(
+                Icons.location_on,
+                color: Colors.white,
+                size: 25,
+              ),
+      ),
+      const Positioned(
+        top: 130,
+              left: 180,
+              child: Text('579 Km',
+              style: TextStyle(color: Colors.white, fontSize: 16, 
+              shadows: <Shadow>[
+      Shadow(
+        offset: Offset(2, 2),  // Desplazamiento horizontal y vertical de la sombra
+        blurRadius: 3.0,      // Radio del desenfoque de la sombra
+        color: Colors.black,   // Color de la sombra
+      ),
+    ],),
+              )
+      ),
+        ],
+      ),
+    );
+  }
+}
